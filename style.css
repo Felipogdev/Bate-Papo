@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: blue;
+    display: grid;
+    grid-template-rows: 10vh;
+}
+
+#top-bar {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#top-bar img {
+    width: 10vh;
+    height: auto;
+}
+
+main {
+    background-color: #F3F3F3;
+    width: 100%;
+    height: 80vh;
+}
+
+.message {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    margin-top: 3vh;
+}
+
+#bottom-bar{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
