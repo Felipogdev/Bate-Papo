@@ -1,44 +1,122 @@
 html, body {
+    width: 100%;
     height: 100%;
-    width: 100%;
-    margin: 0;
-    background-color: blue;
-    display: grid;
-    grid-template-rows: 10vh;
+    font-size: 3vh;
+    font-family: Roboto, serif;
+    font-weight: 400;
 }
 
-#top-bar {
+.login-screen {
+    width: 100%;
+    height: 100%;
     background-color: #FFFFFF;
-    width: 100%;
-    height: 10vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
 }
 
-#top-bar img {
-    width: 10vh;
+.login-screen img {
+    width: 15vh;
     height: auto;
+    margin-bottom: 10vh;
+}
+
+.login-screen button {
+    width: 15vh;
+    height: 6vh;
+    background-color: #E7E7E7;
+    border-radius: 1px;
+    color: #696969;
+    border-color: #D7D7D7;
+}
+
+.login-screen input {
+    width: 30vh;
+    height: 6vh;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    margin-bottom: 2vh;
+    text-align: center;
+    border-color: #D7D7D7;
+}
+
+.login-screen input::placeholder {
+    color:gray;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
 
 main {
+    width: 100%;
+    height: 100%;
     background-color: #F3F3F3;
-    width: 100%;
-    height: 80vh;
 }
 
-.message {
+.top-bar {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 10vh;
-    background-color: black;
-    margin-top: 3vh;
-}
-
-#bottom-bar{
+    height: 8vh;
     background-color: #FFFFFF;
-    width: 100%;
-    height: 10vh;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    box-shadow: 0 4px 6px #F3F3F3;
 }
+
+.top-bar img {
+    position: absolute;
+    left: 10vh;
+    width: 11vh;
+    height: auto;
+}
+
+#people {
+    position: fixed;
+    right: 10vh;
+    width: 20vh;
+    height: 7%;
+}
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -4px 6px #F3F3F3;
+    background-color: #FFFFFF;
+
+}
+
+.bottom-bar input {
+    width: calc(100% - 40px);
+    height: 90%;
+    font-size: 3vh;
+}
+
+.bottom-bar input::placeholder {
+    color:gray;
+    font-style: italic;
+    text-align: left;
+    font-size: 3vh;
+}
+
+#send-message {
+    width: 5vh;
+    height: 5vh;
+}
+
+.side-bar {
+    width: 60%;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    z-index: 2;
+}
+

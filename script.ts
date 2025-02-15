@@ -1,30 +1,30 @@
-import axios from 'axios'
 
-axios.get('https://mock-api.driven.com.br/api/v4/uol/participants')
-    .then(response => {
-        console.log(response.data);
-    })
-    .catch(error => {
-        console.error(error);
-    });
+function login() :void {
+let loginScreen = document.querySelector('.login-screen');
+loginScreen.classList.toggle("hidden");
+}
 
-//API para se conectar ao servidor
-axios.post('https://mock-api.driven.com.br/api/v4/uol/status')
-    .then(response => {
-        console.log(response.data);
-    })
-    .catch(error => {
-        console.error(error);
-    });
+function showSideBar() :void {
+    let sideBar :Element = document.querySelector('.side-bar');
+    sideBar.classList.toggle("hidden");
+}
+/*
+function teste() :void {
+    axios.get('https://mock-api.driven.com.br/api/v4/uol/messages')
+        .then(response=>
+            console.log(response.data));
+}
+ */
 
-
-//API para pegar mensagem
-axios.get('https://mock-api.driven.com.br/api/v4/uol/messages')
-.then(response => {
-    console.log(response.data);
-})
-.catch(error => {
-    console.error("Error", error)
-});
-
-
+(
+    function teste() :void {
+        fetch('https://mock-api.driven.com.br/api/v4/uol/messages')
+            .then((response) => {
+            console.log(response);
+            return response.json();
+        })
+            .then((data) =>{
+                console.log(data);
+            })
+    }
+)()

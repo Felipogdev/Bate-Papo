@@ -5,19 +5,32 @@
     <title>Bate Papo</title>
     <link href="reset.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="top-bar">
+
+<div class="login-screen">
+    <img src="images/logo.png" alt="logo">
+    <input type="text" placeholder="Digite seu nome">
+    <button type="button" onclick="login()">Entrar</button>
+</div>
+<main>
+    <div class="top-bar">
         <img src="images/logo.png" alt="logo">
-        <img src="images/top-icon.png" alt="imagem-pessoas">
+        <ion-icon name="people-sharp" id="people" onclick="showSideBar() "></ion-icon>
     </div>
-    <main>
-    </main>
-    <div id="bottom-bar">
-        <input type="text" id="message-input">
+    <div class="bottom-bar">
+        <input type="text" class="message-input" placeholder="Escreva aqui...">
+        <ion-icon name="paper-plane-outline" id="send-message"></ion-icon>
     </div>
+    <div class="side-bar hidden"></div>
+</main>
 
-
-<script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
