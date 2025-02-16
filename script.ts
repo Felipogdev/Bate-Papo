@@ -1,7 +1,25 @@
+let userName :string = "";
+
+let message  = {
+    from: "",
+    to: "",
+    text: "",
+    type: "",
+    time: "",
+}
+
+
 
 function login() :void {
-let loginScreen = document.querySelector('.login-screen');
+let loginScreen :Element = document.querySelector('.login-screen');
 loginScreen.classList.toggle("hidden");
+userName = (document.getElementById('input-name') as HTMLInputElement).value;
+
+if (!userName) {
+    console.log("Nome vazio");
+    return;
+}
+
 }
 
 function showSideBar() :void {
